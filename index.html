@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2017 Alex Harwood. All rights reserved.
+-->
+<html oncontextmenu="return false">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="webapp/css/jquery-ui.min.css" />
+        <link rel="stylesheet" type="text/css" href="webapp/css/transition.min.css" />
+        <link rel="stylesheet" type="text/css" href="webapp/css/dropdown.min.css" />
+        <link rel="stylesheet" type="text/css" href="webapp/css/button.min.css" />
+        <link rel="stylesheet" type="text/css" href="webapp/css/main.css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+        <style id="appCss"></style>
+    </head>
+    <body class="setting-target" data-setting-target="desktop-area-wallpaper">
+
+        <div class="app-header">
+            <div class="home-icon"></div>
+      
+            <div id="system-clock" class="system-clock">HH:MM:SS</div>
+            <div class="user-icon-header-bar"></div>
+            
+        </div>
+        <div class="dock">
+            <div id="system-app-dock-icon" class="app app-icon" data-app-id="system-app">
+                <img src="webapp/apps/system-app/system-app-icon.png">
+            </div>
+            <div id="ace-js-app-dock-icon" class="app app-icon" data-app-id="ace-js-app">
+                <img src="webapp/apps/ace-js-app/ace-js-app-icon.png">
+            </div>
+            <div id="mceeditor-app-dock-icon" class="app app-icon" data-app-id="mceeditor-app">
+                <img src="webapp/apps/mceeditor-app/mceeditor-app-icon.png">
+            </div>
+            <div id="google-drive-app-dock-icon" class="app app-icon" data-app-id="google-drive-app">
+                <img src="webapp/apps/google-drive-app/google-drive-app-icon.png">
+            </div>
+            <div id="snake-app-dock-icon" class="app app-icon" data-app-id="snake-app">
+                <img src="webapp/apps/snake-app/snake-app-icon.png">
+            </div>
+            <div id="blackjack-app-dock-icon" class="app app-icon" data-app-id="blackjack-app">
+                <img src="webapp/apps/blackjack-app/blackjack-app-icon.png">
+            </div>
+             <div id="racing-app-dock-icon" class="app app-icon" data-app-id="racing-app">
+                <img src="webapp/apps/racing-app/snake-app-icon.png">
+            </div>
+        </div>
+        <div class="desktop-area">
+            <div data-setting-target="show-screen-log" class="screen-logger-wrap hidden setting-target">
+            <div class="header-bar">
+                <div id="network-state" class="network-state">WAITING</div>
+            </div>
+            <div class="screen-log"></div>
+        </div>
+        </div>
+         <script src="https://apis.google.com/js/api.js"></script>
+        <script src="webapp/js/jquery-3.1.1.min.js"></script> 
+        <script src="webapp/js/jquery-ui.min.js"></script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script> 
+        <script src="webapp/js/transition.min.js"></script>
+        <script src="webapp/js/dropdown.min.js"></script> 
+        <script src="webapp/js/framework.js"></script> 
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script>
+            
+            //document.addEventListener("deviceready", onDeviceReady, false);
+           
+                
+            
+        $(document).ready(function(){
+            BAKEWELL.init();
+            
+        });
+               
+           
+        </script>
+    </body>
+</html>

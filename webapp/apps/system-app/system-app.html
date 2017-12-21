@@ -1,0 +1,40 @@
+
+
+<div id="system-app" class="ui-window active hidden">
+    <div class="window-header">
+        <div class="controls">
+            <div class="control close" data-app-id="system-app"></div>
+            <div class="control minimize" data-app-id="system-app"></div>
+            <div class="control maximize" data-app-id="system-app"></div>
+        </div>
+        <p class="app-name">System</p>
+        <p class="window-notification"></p>
+    </div>
+    
+    <div class="window-body padded hidden">
+        
+        <div class="setting-inline">
+            <p>Show screen logging</p>
+            <label class="switch">
+                <input type="checkbox" class="setting-control" data-setting="show-screen-log">
+                <div class="slider round"></div>
+            </label>
+        </div>
+        <hr>
+        <div class="setting">
+            <p>Email address</p>
+            <input type="text" class="setting-control" data-setting="email-address">  
+        </div>
+        <hr>
+        <div class="setting">
+            <p>Desktop background</p>
+            <input type="text" class="setting-control" data-setting="desktop-area-wallpaper">  
+        </div>
+        <hr>
+        <div class="setting-inline">
+        <button class="mini ui button" onclick="BAKEWELL.core.localStorage.clear();">Reset</button>
+        </div>
+        <button id="save" class="mini positive ui button" >Save</button>
+        
+    </div>
+</div>

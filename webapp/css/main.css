@@ -1,0 +1,340 @@
+ html {
+     width: 100%;
+     height: 100%;
+     user-select: none;
+ }
+ 
+ * {
+     box-sizing: border-box;
+ }
+ 
+ button,
+ a,
+ .switch,
+ .slider {
+     cursor: default !important;
+ }
+ 
+ body {
+     padding: 5px;
+     background-color: goldenrod;
+     background-image: url("https://source.unsplash.com/daily");
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-osition: center center;
+     width: 100%;
+     height: 100%;
+     margin: 0px;
+     box-sizing: border-box;
+     font-family: 'Roboto Slab', serif;
+     overflow: hidden;
+ }
+ 
+ .app-header {
+     background-color: rgba(0, 0, 0, 0.6);
+     width: 100%;
+     height: 30px;
+     position: fixed;
+     left: 0px;
+     top: 0px;
+ }
+ 
+ .home-icon {
+     background-image: url("../img/menu-icon.png");
+     background-size: 20px;
+     background-repeat: no-repeat;
+     background-position: center center;
+     padding: 4px;
+     width: 30px;
+     height: 30px;
+     float: left;
+ }
+ 
+ .ease-animate {
+     -webkit-transition: -webkit-transform all 0.2s ease-in-out;
+     -moz-transition: all 0.2s ease-in-out;
+     -o-transition: all 0.2s ease-in-out;
+     transition: all 0.2s ease-in-out;
+ }
+ 
+ .hidden {
+     display: none;
+ }
+ 
+ .ui-window {
+     background-color: white;
+     border-radius: 3px;
+     min-width: 280px;
+     min-height: 300px;
+     width: 280px;
+     height: 300px;
+     -webkit-box-shadow: 2px 2px 28px -8px rgba(0, 0, 0, 0.75);
+     -moz-box-shadow: 2px 2px 28px -8px rgba(0, 0, 0, 0.75);
+     box-shadow: 2px 2px 28px -8px rgba(0, 0, 0, 0.75);
+     opacity: 0.6;
+     z-index: 1;
+     position: absolute;
+ }
+ 
+ .ui-window.active {
+     opacity: 1;
+     z-index: 2;
+ }
+ 
+ .window-header {
+     background-color: #EFEFEF;
+     height: 40px;
+     padding: 10px 10px 15px 10px;
+     border-radius: 3px 3px 0px 0px;
+     position: absolute;
+     top: 0px;
+     left: 0px;
+     width: 100%;
+ }
+ 
+ .window-header>.app-name {
+     float: right;
+     margin-top: 0px;
+     color: #a0a0a0;
+     font-size: 12px;
+ }
+ 
+ .window-header>.controls {
+     width: 50px;
+     display: inline-block;
+ }
+ 
+ .window-header>.controls>.control {
+     width: 10px;
+     height: 10px;
+     border-radius: 50%;
+     margin-right: 5px;
+     float: left;
+ }
+ 
+ .window-header>.controls>.control.close {
+     background-color: #da1313;
+ }
+ 
+ .window-header>.controls>.control.minimize {
+     background-color: #fdc300;
+ }
+ 
+ .window-header>.controls>.control.maximize {
+     background-color: #2faf44;
+ }
+ 
+ .window-header>.window-notification {
+     float: right;
+     display: inline-block;
+     margin-top: 0px;
+     color: #333;
+     padding: 1px 5px;
+     border-radius: 3px;
+     margin-right: 10px;
+     font-size: 12px;
+     background-color: #DDD;
+     height: 20px;
+ }
+ 
+ .window-header>.window-notification.success {
+     color: white;
+     background-color: #02C54C;
+ }
+ 
+ .window-header>.window-notification.error {
+     color: white;
+     background-color: #EF5350;
+ }
+ 
+ .window-body {
+     width: 100%;
+     height: 100%;
+     box-sizing: border-box;
+     overflow: auto;
+     margin-top: 60px;
+ }
+ 
+ .window-body.padded {
+     padding: 10px;
+ }
+ 
+ .window-menu {
+     height: 30px;
+     background-color: #EFEFEF;
+     position: absolute;
+     top: 40px;
+     left: 0px;
+     padding: 0px 10px;
+     width: 100%;
+ }
+ 
+ .dock {
+     background-color: rgba(0, 0, 0, 0.6);
+     border-radius: 3px;
+     position: fixed;
+     left: 5px;
+     width: 50px;
+     top: 50%;
+     margin-top: -150px;
+     height: 300px;
+     z-index: 5;
+     padding: 10px;
+     overflow: auto;
+ }
+ 
+ .dock>.app.active {
+     border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+ }
+ 
+ .dock>.app {
+     border-bottom: 2px solid transparent;
+     margin-bottom: 10px;
+ }
+ 
+ .dock>.app>img {
+     width: 100%;
+ }
+ 
+ .desktop-area {
+     padding-left: 55px;
+     padding-top: 30px;
+     width: 100%;
+     height: 100%;
+     position: relative;
+     overflow: hidden;
+ }
+ 
+ .system-clock {
+     float: right;
+     padding: 4px;
+     text-align: right;
+     color: white;
+     text-align: left;
+     width: 70px;
+ }
+ 
+ .user-icon-header-bar {
+     background-image: url("../img/user-icon.png");
+     background-size: 20px;
+     background-repeat: no-repeat;
+     background-position: center center;
+     padding: 4px;
+     width: 30px;
+     height: 30px;
+     float: right;
+ }
+ /*Screen logger*/
+ 
+ .screen-logger-wrap {
+     width: 400px;
+     height: 300px;
+     background-color: rgba(0, 0, 0, 0.6);
+     color: #DDDDDD;
+     position: absolute;
+     bottom: 0px;
+     padding: 5px;
+     right: 0px;
+     font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+ }
+ 
+ .screen-logger-wrap>.header-bar {
+     height: 60px;
+     width: 100%;
+ }
+ 
+ .screen-logger-wrap .network-state {
+     background-color: black;
+     display: inline-block;
+     border: none;
+     outline: none;
+     padding: 3px;
+     color: #333;
+ }
+ 
+ .screen-logger-wrap>.screen-log {
+     overflow-y: scroll;
+     height: 240px;
+ }
+ 
+ .screen-logger-wrap .network-state.online {
+     background-color: greenyellow;
+ }
+ 
+ .wrap .network-state.offline {
+     background-color: orangered;
+ }
+ /*CUSTOM CHECKBOXES*/
+ 
+ .switch {
+     position: relative;
+     display: inline-block;
+     width: 60px;
+     height: 34px;
+ }
+ 
+ .switch input {
+     display: none;
+ }
+ 
+ .slider {
+     position: absolute;
+     cursor: pointer;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     background-color: #ccc;
+     -webkit-transition: .2s;
+     transition: .2s;
+ }
+ 
+ .slider:before {
+     position: absolute;
+     content: "";
+     height: 26px;
+     width: 26px;
+     left: 4px;
+     bottom: 4px;
+     background-color: white;
+     -webkit-transition: .2s;
+     transition: .2s;
+ }
+ 
+ input:checked+.slider {
+     background-color: #2196F3;
+ }
+ 
+ input:focus+.slider {
+     box-shadow: 0 0 1px #2196F3;
+ }
+ 
+ input:checked+.slider:before {
+     -webkit-transform: translateX(26px);
+     -ms-transform: translateX(26px);
+     transform: translateX(26px);
+ }
+ /* Rounded sliders */
+ 
+ .slider.round {
+     border-radius: 34px;
+ }
+ 
+ .slider.round:before {
+     border-radius: 50%;
+ }
+ 
+ .setting-inline {
+     display: inline-block;
+ }
+ 
+ .setting-inline>p {
+     display: inline-block;
+     vertical-align: middle;
+     margin-top: -10px;
+     margin-right: 5px;
+ }
+ 
+ .hidden {
+     display: none;
+ }
